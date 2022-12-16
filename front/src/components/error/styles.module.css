@@ -1,0 +1,23 @@
+.error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f7d7db;
+  height: 60px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.error__message {
+  color: #73245a;
+}
+
+.error__button {
+  background-color: #343a3f;
+  color: #e7fbf7;
+  height: 36px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+}
