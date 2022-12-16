@@ -1,0 +1,29 @@
+.error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f7d7db;
+  height: 60px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.error__message {
+  color: #73245a;
+}
+
+.error__link {
+  background-color: #343a3f;
+  color: #e7fbf7;
+  padding: 12px 0;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.error__link:active {
+  text-decoration: none;
+}

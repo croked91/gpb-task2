@@ -10,7 +10,6 @@ export const isLoading = createSlice({
   initialState,
   reducers: {
     setIsLoading: (state, action: PayloadAction<boolean>) => {
-      console.log(action.payload);
       return { ...state, isLoading: action.payload };
     },
   },
