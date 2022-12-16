@@ -1,6 +1,5 @@
 import { useAppDispatch } from "bll/hooks/useAppDispatch";
 import { useAppSelector } from "bll/hooks/useAppSelector";
-import { setIsError } from "bll/slices/error";
 import { getServicesTrigger } from "bll/slices/services";
 import { Error } from "components/error";
 import { useEffect } from "react";
@@ -20,7 +19,7 @@ export const Services = () => {
   }, []);
 
   if (isError) {
-    return <Error path="/" onClick={() => dispatch(setIsError(false))} />;
+    return <Error path="/" onClick={() => dispatch(getServicesTrigger())} />;
   }
 
   if (isLoading) {

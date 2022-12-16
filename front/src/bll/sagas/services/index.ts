@@ -8,6 +8,7 @@ import { getServises } from "./utils";
 function* workGetAllServices() {
   try {
     yield put(setIsLoading(true));
+    yield put(setIsError(false));
     const res: IService[] = yield call(getServises);
     yield put(getServices(res));
     yield put(setIsLoading(false));

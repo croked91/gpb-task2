@@ -13,11 +13,17 @@
   color: #73245a;
 }
 
-.error__button {
+.error__link {
   background-color: #343a3f;
   color: #e7fbf7;
-  height: 36px;
+  padding: 12px 0;
   width: 150px;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.error__link:active {
+  text-decoration: none;
 }

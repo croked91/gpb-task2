@@ -13,13 +13,15 @@ export const service = createSlice({
   name: "serviceDetail",
   initialState,
   reducers: {
-    getServiceDetail: (state, action: PayloadAction<IService>) => {
-      return (state = action.payload);
+    getService: (state, action: PayloadAction<IService>) => {
+      return action.payload;
     },
-    getServiceDetailTrigger: (_, action: PayloadAction<string>) => {},
+    getServiceTrigger: (_, action: PayloadAction<string>) => {
+      return;
+    },
   },
 });
 
-export const { getServiceDetail, getServiceDetailTrigger } = service.actions;
+export const { getService, getServiceTrigger } = service.actions;
 
 export default service.reducer;

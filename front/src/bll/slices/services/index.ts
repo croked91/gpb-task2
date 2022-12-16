@@ -9,7 +9,7 @@ export const services = createSlice({
   initialState,
   reducers: {
     getServices: (state, action: PayloadAction<IService[]>) => {
-      return (state = action.payload);
+      return action.payload;
     },
     getServicesTrigger: () => {},
   },

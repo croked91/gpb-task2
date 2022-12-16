@@ -1,8 +1,6 @@
 import { useAppDispatch } from "bll/hooks/useAppDispatch";
 import { useAppSelector } from "bll/hooks/useAppSelector";
-import { setIsError } from "bll/slices/error";
-
-import { getServiceDetailTrigger } from "bll/slices/service";
+import { getServiceTrigger } from "bll/slices/service";
 import { Error } from "components/error";
 import { useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
@@ -17,7 +15,7 @@ export const Details = () => {
   const { isError } = useAppSelector((s) => s.isError);
 
   useEffect(() => {
-    dispatch(getServiceDetailTrigger(params.id || ""));
+    dispatch(getServiceTrigger(params.id || ""));
   }, []);
 
   if (isLoading) {
@@ -27,7 +25,7 @@ export const Details = () => {
   if (isError) {
     return (
       <Error
-        onClick={() => dispatch(setIsError(false))}
+        onClick={() => dispatch(getServiceTrigger(params.id || ""))}
         path={`${BASE_URL}/${params.id}/details`}
       />
     );
