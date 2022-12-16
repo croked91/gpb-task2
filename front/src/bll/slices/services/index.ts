@@ -1,6 +1,6 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-import { IService } from "../../../shared/api/interface";
+import { IService } from "shared/api/interface";
 
 const initialState: IService[] = [];
 
